@@ -38,7 +38,11 @@ Add corresponding link and script elements to index.html to reference modules in
 OR
 Update .angular-cli.json file to include the file paths of bootstrap.min.css, jquery-3.2.1.min.js and bootstrap.min.js to the scripts and styles array. Do not reference the files in the index.html file
 
+## Using Bootstrap 4 Cards
 
+Bootstrap 4 Cards are more mobile friendly compared to panels, thumbnails and wells.
+
++ Implemented basic and profile cards with background color. 
 
 
 

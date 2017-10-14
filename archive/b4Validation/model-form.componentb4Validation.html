@@ -1,0 +1,80 @@
+<div>
+  <div class="row">
+<div class="col-lg-7">
+<form novalidate [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+ <!--  <fieldset formGroupName="name"> -->
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="firstName" formControlName="firstName">
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="lastName" formControlName="lastName">
+    </div>
+<!--   </fieldset> -->
+<!-- Address fields -->
+<div formGroupName="address">   
+  <div class="form-group">
+    <label for="city">City</label> 
+    <input type="text" class="form-control" name="city" formControlName="city">
+  </div>
+  
+  <div class="form-group">
+    <label for="street">Street</label> 
+    <input type="text" class="form-control" name="street" formControlName="street">
+  </div>
+
+  <div class="form-group">
+    <label for="zip">Zip Code</label> 
+    <input type="text" class="form-control" name="zip" formControlName="zip">
+  </div>
+</div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+
+
+<!--   <div class="form-group" [ngClass]="{
+      'has-danger': myform.controls.email.invalid && myform.controls.email.dirty,
+      'has-success': myform.controls.email.valid && myform.controls.email.dirty
+    }">
+    <label>Email</label>
+    <input type="email"
+           class="form-control"
+           formControlName="email">
+  </div> -->
+
+<!--   <div class="form-group">
+    <label>Password</label>
+    <input type="password"
+           class="form-control"
+           formControlName="password">
+    <div class="form-control-feedback" *ngIf="password.invalid && password.dirty">
+        Field is invalid 
+    </div>
+  </div> -->
+
+<!--   <div class="form-group">
+    <label>Language</label>
+    <select class="form-control"
+            formControlName="language">
+      <option value="">Please select a language</option>
+      <option *ngFor="let lang of langs"
+              [value]="lang">{{lang}}
+      </option>
+    </select>
+  </div> -->
+</form>
+</div>
+<div class="col-lg-5">
+  <h4>Detail Summary:</h4>
+  <pre>{{myform.value | json}}</pre>
+</div>
+</div>
+</div>
+<!-- <div class="col-lg-5"  [hidden]="!submitted">
+  <pre>{{myform.value | json}}</pre>
+</div> -->
